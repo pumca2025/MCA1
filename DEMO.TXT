@@ -1,12 +1,12 @@
 ```bash
 # 1. Create a new user
-sudo adduser student01
+sudo adduser exam
 
 # 2. Verify the new user
-id student01
+id exam
 
 # 3. Test login as the new user
-su - student01
+su - exam
 
 # 4. Verify the current user
 whoami
