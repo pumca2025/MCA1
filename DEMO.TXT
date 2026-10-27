@@ -1,0 +1,37 @@
+```bash
+# 1. Create a new user
+sudo adduser student01
+
+# 2. Verify the new user
+id student01
+
+# 3. Test login as the new user
+su - student01
+
+# 4. Verify the current user
+whoami
+
+# 5. Return to the original user
+exit
+
+# 6. Create the LightDM configuration directory if needed
+sudo mkdir -p /etc/lightdm
+
+# 7. Create the LightDM configuration file
+sudo nano /etc/lightdm/lightdm.conf
+```
+
+**Step 7:** Nano editor open aagumbodhu, indha configuration-ai paste pannunga:
+
+```ini
+[Seat:*]
+greeter-hide-users=true
+greeter-show-manual-login=true
+```
+
+**Save:** `Ctrl + O` → `Enter` → `Ctrl + X`
+
+```bash
+# 8. Restart Ubuntu
+sudo reboot
+```
